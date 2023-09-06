@@ -22,7 +22,7 @@ function toggleDarkMode() {
 
         const spanBurger = isDarkMode // Cor Span Burger
             ? "#d95032"
-            : "#000092"
+            : "#123953"
 
         const borderColor = isDarkMode // Cor Borda Body
             ? "3px #1c1c1c solid"

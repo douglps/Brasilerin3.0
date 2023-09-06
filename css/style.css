@@ -52,6 +52,7 @@ a {
 
 html {
     height: 100%;
+    transition: 3s;
 }
 
 body {
@@ -134,7 +135,7 @@ transition: .5s;
 #menu-sup { /* AJUSTAR MEDIDAS NBO MEDIA QUERY */
     padding: 10px;
     width: 90vw;
-    margin: 8px;
+    margin: 8px auto;
     background-image: linear-gradient(to left, transparent, #3993aaaf, transparent);
     border-radius: 15px;
     display: block;
@@ -166,7 +167,7 @@ transition: .5s;
 
 #menu-sup a:hover{
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
-    background-color: #f2913d93;
+    background-color: #f2913d80;
 }
 
 #menu-sup a:active{
