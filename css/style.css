@@ -50,7 +50,7 @@ a {
     box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.445);
 }
 
-html {
+html, body{
     height: 100%;
     transition: 3s;
 }
@@ -63,7 +63,6 @@ body {
     margin: auto;
     padding: 10px;
     text-indent: 25px;
-    height: 100%;
     width: 100%;
     border: 3px #3993aa solid;
     border-radius: 8px;
@@ -153,27 +152,32 @@ transition: .5s;
     display: none;
 }
 
-#menu-sup a{
+.btn_menu {
     font-family: 'Concert';
     border: 2px #f2f0d5 solid;
     margin: 4px;
-    padding: 2px 6px;
+    padding: 8px;
     border-radius: 6px;
     justify-content: center;
     display: inline-block;
     align-items: center;
     font-size: 1.1em;
+    background-color: transparent;
 }
 
-#menu-sup a:hover{
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+.btn_menu:hover{
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
     background-color: #f2913d80;
 }
 
-#menu-sup a:active{
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.61);
-    background-color: #949383;
+.btn_menu:active{
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    background-color: #f2f0d5;
+    color: #d95032;
+    border: 1px #00000010 solid;
+    font-size: 1.1em;
 }
+
 
 /* ---***---  Corpo ---***--- */
 

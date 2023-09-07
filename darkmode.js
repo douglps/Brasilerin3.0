@@ -28,17 +28,9 @@ function toggleDarkMode() {
             ? "3px #1c1c1c solid"
             : "3px #3993aa solid";
     
-        const linkColor = isDarkMode // Cor Links Menu Superior
+        const linkColor = isDarkMode // Cor Botões Menu Superior
             ? "#3993aa"
             : "#1c1c1c";
-            
-        const borderSup = isDarkMode // Cor Borda Links Menu Superior
-            ? "3px #1c1c1c solid"
-            : "2px #f2f0d5 solid"
-
-        const fSize = isDarkMode // Tamanho fonte Menu Superior
-            ? "1.3em"
-            : "1.2em"
 
         const bgMain = isDarkMode // Cor Background Main
             ? "#181920"
@@ -50,11 +42,9 @@ function toggleDarkMode() {
 
         const menuSup = document.querySelector('#menu-sup');
             if (menuSup) {
-                const links = menuSup.querySelectorAll('a')
-                links.forEach(link => {
-                    link.style.color = linkColor;
-                    link.style.border = borderSup;
-                    link.style.fontSize = fSize;
+                const botoes = menuSup.querySelectorAll('button')
+                botoes.forEach(botoes => {
+                    botoes.style.color = linkColor;
             });
 
 
