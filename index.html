@@ -14,15 +14,19 @@
         <div id="cabecalho">
             <img src="./imagens/arara_logo200x200-300.png" alt="Logotipo Arara" id="logo">
             <img src="./imagens/lettering350x125.png" alt="Brasilerin" id="letter">
-            <img src="./imagens/icons/mobile.png" alt="Telefone" id="phone">
-            <img src="./imagens/icons/tablet.png" alt="Tablet" id="tablet">
-            <img src="./imagens/icons/desktop.png" alt="Desktop" id="desktop">
-            <img src="./imagens/icons/tv.png" alt="TV" id="tv">
-            <img src="./imagens/icons/print.png" alt="Impressora" id="print">
+            <div id="tela"></div>
+            <div id="img" onclick="tamanho_tela(), expandirImagem()">
+                <img src="./imagens/icons/mobile.png" alt="Telefone" id="phone" >
+                <img src="./imagens/icons/tablet.png" alt="Tablet" id="tablet">
+                <img src="./imagens/icons/desktop.png" alt="Desktop" id="desktop">
+                <img src="./imagens/icons/tv.png" alt="TV" id="tv">
+                <input type="checkbox" name="tamanho" id="tamanho">
+                <img src="./imagens/icons/print.png" alt="Impressora" id="print">
+            </div>
             <img src="./imagens/icons/dark_mb.png" alt="Modo Escuro" id="dark_m" onclick="darkmode(), rotateDarkButton()" >
-            <img src="./imagens/icons/home.png" alt="Home" id="home">
+            <img src="./imagens/icons/contact.png" alt="Home" id="home">
             <input type="checkbox" name="mode" id="mode">
-        </div>
+        </div> <!-- id cabecalho -->
 
         <nav id="menu-sup">
             <div class="container">
@@ -33,7 +37,7 @@
                     <span></span>
                     <span></span>
                 </label>
-            </div>
+            </div> <!-- id menu sup-->
             <div id="hide_menu">
                 <button type="button" class="btn_menu">Artigos</button> | 
                 <button type="button" class="btn_menu">Loja</button> | 
@@ -41,7 +45,7 @@
                 <button type="button" class="btn_menu">Aaaaa</button> |
                 <button type="button" class="btn_menu">Bbbbbb</button> |
                 <button type="button" class="btn_menu">Cccccccc</button>
-            </div>
+            </div> <!-- id hide_menu-->
         </nav>
     </header>
     <main>
@@ -52,7 +56,7 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos et earum, maiores ullam laudantium atque? Fugiat quibusdam odit aspernatur aliquid veritatis voluptatem amet doloribus, cum repudiandae ipsum repellat totam magnam?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla saepe architecto aliquam amet, sed porro omnis sapiente. Consectetur, iure cumque ducimus optio molestiae rerum. Error officia quidem aliquid laborum ipsum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora nostrum fugit necessitatibus consectetur voluptatum, facere quidem asperiores placeat non blanditiis cupiditate, sint aut repellat commodi quisquam odio saepe dolorem nisi.</p>
             </div>
 
-        </section>
+        </section> <!-- id corpo-->
     </main>
     <footer>
         <h4>Todos os direitos reservados - <span>Brasilerin</span>© 2023</h4>
@@ -61,5 +65,6 @@
         
     </script>
     <script src="darkmode.js"></script>
+    <script src="tamanho_tela.js"></script>
 </body>
 </html>

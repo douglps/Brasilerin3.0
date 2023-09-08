@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/media-query.css">
     <link rel="stylesheet" href="./css/hamburguer.css">
     <link rel="stylesheet" href="./css/dark_mode.css">
+    <link rel="stylesheet" href="forms.css">
     <title>Brasilerin</title>
 </head>
 <body>
@@ -14,15 +15,19 @@
         <div id="cabecalho">
             <img src="./imagens/arara_logo200x200-300.png" alt="Logotipo Arara" id="logo">
             <img src="./imagens/lettering350x125.png" alt="Brasilerin" id="letter">
-            <img src="./imagens/icons/mobile.png" alt="Telefone" id="phone">
-            <img src="./imagens/icons/tablet.png" alt="Tablet" id="tablet">
-            <img src="./imagens/icons/desktop.png" alt="Desktop" id="desktop">
-            <img src="./imagens/icons/tv.png" alt="TV" id="tv">
-            <img src="./imagens/icons/print.png" alt="Impressora" id="print">
+            <div id="tela"></div>
+            <div id="img" onclick="tamanho_tela(), expandirImagem()">
+                <img src="./imagens/icons/mobile.png" alt="Telefone" id="phone" >
+                <img src="./imagens/icons/tablet.png" alt="Tablet" id="tablet">
+                <img src="./imagens/icons/desktop.png" alt="Desktop" id="desktop">
+                <img src="./imagens/icons/tv.png" alt="TV" id="tv">
+                <input type="checkbox" name="tamanho" id="tamanho">
+                <img src="./imagens/icons/print.png" alt="Impressora" id="print">
+            </div>
             <img src="./imagens/icons/dark_mb.png" alt="Modo Escuro" id="dark_m" onclick="darkmode(), rotateDarkButton()" >
-            <img src="./imagens/icons/home.png" alt="Home" id="home">
+            <img src="./imagens/icons/contact.png" alt="Home" id="home">
             <input type="checkbox" name="mode" id="mode">
-        </div>
+        </div> <!-- div cabecalho-->
 
         <nav id="menu-sup">
             <div class="container">
@@ -44,24 +49,29 @@
             </div>
         </nav>
     </header>
-    <main>
-            <div>
-                <form action="#">
-                    <fieldset>
-                        <legend>Contato: </legend>
-                        <label for="nome">Nome: </label>
-                        <input type="text" name="nome" id="nome">
-
-                    </fieldset>
-                </form>
-            </div>
-    </main>
+        <main>
+            <form>
+                <fieldset id="contato">
+                    <legend>Contato: </legend>
+                    <div class="formulario">
+                        <label for="nome"><strong>Nome:</strong></label>
+                        <input type="text" id="nome" name="nome">
+                    </div>
+                
+                    <div class="formulario">
+                            <label for="email"><strong>Email:</strong></label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </p>
+                </fieldset>
+        </main>
     <footer>
         <h4>Todos os direitos reservados - <span>Brasilerin</span>© 2023</h4>
     </footer>
     <script>
-        
+
     </script>
     <script src="darkmode.js"></script>
+    <script src="tamanho_tela.js"></script>
 </body>
 </html>

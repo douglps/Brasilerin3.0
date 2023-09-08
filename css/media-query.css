@@ -144,22 +144,13 @@ img#print {display: block; }
 }
 
 #tablet {
-    position: absolute;
-    width: 25px;
-    top: 22px;
-    right: 2vmax;
+    width: 100%;
 }
 
 #desktop {
-    position: absolute;
-    width: 25px;
-    top: 22px;
-    right: 2vmax;
+    width: 100%;
 }
 
 #tv {
-    position: absolute;
-    width: 25px;
-    top: 22px;
-    right: 2vmax;
+    width: 100%;
 }
