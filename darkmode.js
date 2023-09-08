@@ -3,12 +3,20 @@ function toggleDarkMode() {
     const modeCheckbox = document.getElementById("mode");
     const darkModeButton = document.getElementById("dark_m");
 
-    darkModeButton.addEventListener("click", function() {
+    darkModeButton.addEventListener("click", function () {
         modeCheckbox.checked = !modeCheckbox.checked;
         setDarkMode(modeCheckbox.checked);
+        // Salvando o estado do modo escuro no localStorage
+        localStorage.setItem("darkMode", modeCheckbox.checked);
     });
-    
-    // Define o estilo de fundo com base no estado inicial do modo
+
+    // Recupera o estado do modo escuro do localStorage ao carregar a página
+    const storedDarkMode = localStorage.getItem("darkMode");
+    if (storedDarkMode === "true") {
+        modeCheckbox.checked = true;
+    }
+
+    // Define o estilo de fundo com base no estado atual do modo
     setDarkMode(modeCheckbox.checked);
 
     function setDarkMode(isDarkMode) {
