@@ -4,7 +4,7 @@ function toggleDarkMode() {
     let mode = "light"; // Mode recebe "light"
 
     // ROTAÇÃO DO BOTÃO DARK MODE
-    darkModeButton.style.transition = "transform .5s";
+    darkModeButton.style.transition = "transform 2s";
 
     darkModeButton.addEventListener("click", function () {
         if (mode === "light") {
@@ -62,6 +62,11 @@ function toggleDarkMode() {
         const fColor = isDarkMode // Cor Fonte Main
             ? "#f2f0d5"
             : "#000000"
+        
+            const bgField = isDarkMode  //Background formulário #field
+            ? "linear-gradient(180deg, #132036, #000000)"
+            : "linear-gradient(180deg, #f2f0d5, #d951325d)";
+
 
         const menuSup = document.querySelector('#menu-sup');
         if (menuSup) {
@@ -86,7 +91,11 @@ function toggleDarkMode() {
             const labelSpan = document.querySelectorAll('label span');
             labelSpan.forEach(span => {
                 span.style.backgroundColor = spanBurger;
+
             });
+            
+            const bgFieldset = document.querySelector('#field');
+            bgFieldset.style.backgroundImage = bgField
         }
     }
 

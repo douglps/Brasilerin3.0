@@ -1,56 +1,85 @@
 /* Formulários */
 
-#contato {
-  padding: 5px;
-  border: 3px #f2913d40 dotted;
-  border-radius: 25px;
-}
-
-fieldset {
-  
-}
-
-#contato > legend {
-  padding-left: 45px;
-  border: thin solid white;
+form {
+  width: 90%;
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
 }
 
 .formulario {
-  text-align: left;
-  text-indent: 0;
-  display: inline-block;
-  margin: 10px; /* Espaçamento entre os elementos */
-  padding: 5px;
-  margin-right: 40px;
+  display: block;
+ 
+}
+
+.formulario fieldset {
+  border: 0px #f2913d40 dotted;
+  border-radius: 25px;
+  background-image: linear-gradient(to top, #1c1c1c5d, rgba(255, 255, 255, 0.644));
+  width: 100%;
+  height: 100%;
+}
+
+.formulario legend {
+  padding: 0px 15px;
+  font-size: 1.2em;
+  font-weight: 800;
 }
 
 .formulario label {
-  left: auto;
-  margin-left: 18px;
+  padding: 5px 0px 20px 0px;
+  left: 20%;
 }
 
 .formulario input {
   background-color: #f2913d9c;
-  border-radius: 10px;
+  border-radius: 20px;
   text-transform: uppercase;
   text-indent: 5px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.479);
   padding: 4px;
   font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
-  outline: 2px rgba(255, 255, 255, 0.356) solid;
-  margin: 10px;
+  border: 0px;
+  outline-color: transparent;
+  width: 90%;
+  display: block;
+  margin: 10px auto;
+  max-width: 420px;
 }
 
-.botoes {
-  background-color: rgb(228, 207, 169);
+#email {
+  text-transform: lowercase;
+}
+
+.formulario textarea {
+  background-color: color-mix(
+    in lch,
+    rgba(247, 240, 233, 0.747) 40%,
+    rgb(247, 201, 50)
+  );
+  border-radius: 20px;
+  text-indent: 25px;
+  padding: 4px;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0px;
+  outline-color: transparent;
+  width: 90%;
+  margin: 10px auto;
+  max-width: 420px;
+  resize: vertical;
+}
+
+.formulario [type=submit] {
+  background-color: rgb(216, 147, 20);
   color: black;
-  border-color: #0d195e;
-  border-radius: 8px;
-  margin: 0px 0px 10px 25px;
-  padding: 4px 20px;
+  border-radius: 20px;
+  margin: 50px auto !important;
+  width: 75% !important;
   font-size: 1em;
   font-weight: bold;
-  max-width: min-content;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.445);
+  outline: 2px rgb(105, 104, 104) solid !important;
+  cursor: pointer;
 }

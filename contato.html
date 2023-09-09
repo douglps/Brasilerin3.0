@@ -1,87 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media-query.css">
-    <link rel="stylesheet" href="./css/hamburguer.css">
-    <link rel="stylesheet" href="./css/dark_mode.css">
-    <link rel="stylesheet" href="./css/forms.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media-query.css" />
+    <link rel="stylesheet" href="./css/hamburguer.css" />
+    <link rel="stylesheet" href="./css/dark_mode.css" />
+    <link rel="stylesheet" href="./css/forms.css" />
     <title>Brasilerin</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div id="cabecalho">
+      <div id="cabecalho">
+        <img
+          src="./imagens/arara_logo200x200-300.png"
+          alt="Logotipo Arara"
+          id="logo"
+        />
+        <img
+          src="./imagens/lettering350x125.png"
+          alt="Brasilerin"
+          id="letter"
+        />
 
-            <img src="./imagens/arara_logo200x200-300.png" alt="Logotipo Arara" id="logo">
-            <img src="./imagens/lettering350x125.png" alt="Brasilerin" id="letter">
+        <div id="tela"></div>
 
-            <div id="tela"></div>
+        <div id="img" onclick="tamanho_tela()">
+          <img src="./imagens/icons/mobile.png" alt="Telefone" id="phone" />
+          <img src="./imagens/icons/tablet.png" alt="Tablet" id="tablet" />
+          <img src="./imagens/icons/desktop.png" alt="Desktop" id="desktop" />
+          <img src="./imagens/icons/tv.png" alt="TV" id="tv" />
+          <img src="./imagens/icons/print.png" alt="Impressora" id="print" />
+        </div>
+        <!-- id img -->
 
-            <div id="img" onclick="tamanho_tela()">
-                <img src="./imagens/icons/mobile.png" alt="Telefone" id="phone" >
-                <img src="./imagens/icons/tablet.png" alt="Tablet" id="tablet">
-                <img src="./imagens/icons/desktop.png" alt="Desktop" id="desktop">
-                <img src="./imagens/icons/tv.png" alt="TV" id="tv">
-                <img src="./imagens/icons/print.png" alt="Impressora" id="print">
-            </div> <!-- id img -->
+        <div id="div_dark" onclick="toggleDarkMode()">
+          <img
+            src="./imagens/icons/dark_mb.png"
+            alt="Modo Escuro"
+            id="dark_m"
+          />
+        </div>
+        <!-- id div_dark -->
 
-            <div id="div_dark" onclick="toggleDarkMode()">
-                <img src="./imagens/icons/dark_mb.png" alt="Modo Escuro" id="dark_m">
-            </div> <!-- id div_dark -->
+        <div id="icone">
+          <img src="./imagens/icons/contact.png" alt="Home" />
+        </div>
+        <!-- id icone -->
+      </div>
+      <!-- id cabecalho -->
 
-            <div id="icone">
-                <img src="./imagens/icons/contact.png" alt="Home">
-            </div> <!-- id icone -->
+      <nav id="menu-sup">
+        <div class="container">
+          <input type="checkbox" name="checkbox-menu" id="checkbox-menu" />
 
-        </div> <!-- id cabecalho -->
-
-        <nav id="menu-sup">
-            <div class="container">
-                <input type="checkbox" name="checkbox-menu" id="checkbox-menu">
-
-                <label for="checkbox-menu" onclick="clickMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
-            <div id="hide_menu">
-                <a href="index.html"><button type="button" class="btn_menu">Home</button></a> | 
-                <button type="button" class="btn_menu">Artigos</button> | 
-                <button type="button" class="btn_menu">Loja</button> | 
-                <button type="button" class="btn_menu">Aaaaa</button> |
-                <button type="button" class="btn_menu">Bbbbbb</button> |
-                <button type="button" class="btn_menu">Cccccccc</button>
-            </div>
-        </nav>
+          <label for="checkbox-menu" onclick="clickMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        <div id="hide_menu">
+          <a href="index.html"
+            ><button type="button" class="btn_menu">Home</button></a
+          >
+          | <button type="button" class="btn_menu">Artigos</button> |
+          <button type="button" class="btn_menu">Loja</button> |
+          <button type="button" class="btn_menu">Aaaaa</button> |
+          <button type="button" class="btn_menu">Bbbbbb</button> |
+          <button type="button" class="btn_menu">Cccccccc</button>
+        </div>
+      </nav>
     </header>
-        <main>
+    <main>
+      <div class="formulario">
+        <form>
+          <fieldset id="field">
+            <legend>Contato:</legend>
             <div>
-                <form class="formulario">
-                    <fieldset id="contato">
-                        <legend>Contato: </legend>
-                        <div class="formulario">
-                            <label for="nome"><strong>Nome:</strong></label>
-                            <input type="text" id="nome" name="nome">
-                        </div>
-                
-                        <div class="formulario">
-                            <label for="email"><strong>Email:</strong></label>
-                            <input type="email" id="email" name="email">
-                        </div>
-                        <div><input type="submit" value="Enviar" class="botoes"></div>
-                    </fieldset>
+              <label for="nome"><strong>Nome:</strong></label>
+              <input type="text" id="nome" name="nome" />
             </div>
-        </main>
-    <footer>
-        <h4>Todos os direitos reservados - <span>Brasilerin</span>© 2023</h4>
-    </footer>
-    <script>
 
-    </script>
+            <div>
+              <label for="email"><strong>Email:</strong></label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div>
+                <label for="texto"><strong>Mensagem:</strong></label>
+                <textarea name="texto" id="Mensagem" cols="30" rows="5" placeholder="  Sua mensagem..."></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Enviar" class="botoes" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <h4>Todos os direitos reservados - <span>Brasilerin</span>© 2023</h4>
+    </footer>
+    <script></script>
     <script src="darkmode.js"></script>
     <script src="tamanho_tela.js"></script>
-</body>
+  </body>
 </html>

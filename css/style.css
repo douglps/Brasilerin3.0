@@ -10,7 +10,7 @@
 
 /*  ---***--- GLOBAIS ---***--- */
 
-:root {
+:root { /* VARIÁVEIS DO CSS */
   --cor_azul: #3993aa;
   --cor_clara: #f2f0d5;
   --cor_amarela: #f2913d;
@@ -22,6 +22,7 @@
   margin: 0px;
   padding: 0px;
   transition: 0.3s ease-out;
+  box-sizing: border-box;
 }
 
 a {
@@ -32,6 +33,8 @@ html,
 body {
   min-height: 100%;
   height: auto;
+  width: auto;
+  min-width: 320px;
 }
 
 body {
@@ -41,6 +44,9 @@ body {
   width: 100%;
   border: 3px #3993aa solid;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ---***--- Cabeçalho ---***--- */
@@ -52,7 +58,7 @@ div#cabecalho {
   height: 140px;
   margin: 10px auto;
   position: relative;
-  min-width: 380px;
+  min-width: 280px;
 }
 
 #img {
@@ -68,12 +74,6 @@ div#cabecalho {
   top: 22px;
   right: 2vmax;
   cursor: pointer;
-}
-
-#tamanho {
-  /* Checkbox para screen View */
-  opacity: 80%;
-  z-index: 21;
 }
 
 #tela {
@@ -201,7 +201,6 @@ main {
   margin: auto;
   text-align: justify;
   border: 1px var(--cor_clara) solid;
-  min-width: 470px;
 }
 
 #corpo {
