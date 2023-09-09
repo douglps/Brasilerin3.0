@@ -72,7 +72,7 @@ div#cabecalho {
 
 #tamanho {
   /* Checkbox para screen View */
-  opacity: 0%;
+  opacity: 80%;
   z-index: 21;
 }
 
@@ -81,7 +81,7 @@ div#cabecalho {
   width: 80px;
   top: 20px;
   right: 6vmax;
-  font-size: 0.8em;
+  font-size: 0.7em;
   text-align: center;
   display: none;
 }
@@ -111,13 +111,6 @@ div#cabecalho {
   display: block;
   align-items: center;
   justify-content: center;
-}
-
-#mode {
-  /* Checkbox para dark Mode */
-  opacity: 00%;
-  z-index: 20;
-  display: inline;
 }
 
 #dark_m {

@@ -1,30 +1,38 @@
 //BOTÃO DARKMODE
 function toggleDarkMode() {
-    const modeCheckbox = document.getElementById("mode");
     const darkModeButton = document.getElementById("dark_m");
-    
-    // ROTAÇÃO DO BOTÃO DARK MODE
-    const darkButton = document.getElementById("dark_m");
-    
-    darkButton.style.transition = "transform .5s";
+    let mode = "light"; // Mode recebe "light"
 
+    // ROTAÇÃO DO BOTÃO DARK MODE
+    darkModeButton.style.transition = "transform .5s";
 
     darkModeButton.addEventListener("click", function () {
-        modeCheckbox.checked = !modeCheckbox.checked;
-        setDarkMode(modeCheckbox.checked);
-        dark_m.style.transform = darkButton.style.transform ? "" : "rotate(calc(3*180deg))";
-        // Salvando o estado do modo escuro no localStorage
-        localStorage.setItem("darkMode",modeCheckbox.checked);
+        if (mode === "light") {
+            darkModeButton.style.transform = "rotate(calc(3*180deg))";
+            mode = "dark";
+            localStorage.setItem("mode", mode);
+        } else if (mode === "dark") {
+            darkModeButton.style.transform = "rotate(0deg)";
+            mode = "light";
+            localStorage.setItem("mode", mode);
+        }
+
+        setDarkMode(mode === "dark");
     });
 
     // Recupera o estado do modo escuro do localStorage ao carregar a página
-    const storedDarkMode = localStorage.getItem("darkMode");
-    if (storedDarkMode === "true") {
-        modeCheckbox.checked = true;
+    const storedDarkMode = localStorage.getItem("mode");
+    if (storedDarkMode === "light") {
+        mode = "light";
+    } else if (storedDarkMode === "dark") {
+        mode = "dark";
     }
 
+    // Define a rotação do darkModeButton com base no estado atual do modo
+    darkModeButton.style.transform = mode === "dark" ? "rotate(calc(3*180deg))" : "rotate(0deg)";
+
     // Define o estilo de fundo com base no estado atual do modo
-    setDarkMode(modeCheckbox.checked);
+    setDarkMode(mode === "dark");
 
     function setDarkMode(isDarkMode) {
         const bgColor = isDarkMode  //Background body
@@ -42,7 +50,7 @@ function toggleDarkMode() {
         const borderColor = isDarkMode // Cor Borda Body
             ? "3px #1c1c1c solid"
             : "3px #3993aa solid";
-    
+
         const linkColor = isDarkMode // Cor Botões Menu Superior
             ? "#3993aa"
             : "#1c1c1c";
@@ -56,32 +64,32 @@ function toggleDarkMode() {
             : "#000000"
 
         const menuSup = document.querySelector('#menu-sup');
-            if (menuSup) {
-                const botoes = menuSup.querySelectorAll('button')
-                botoes.forEach(botoes => {
-                    botoes.style.color = linkColor;
+        if (menuSup) {
+            const botoes = menuSup.querySelectorAll('button')
+            botoes.forEach(botoes => {
+                botoes.style.color = linkColor;
             });
 
 
-        document.body.style.backgroundImage = bgColor;
-        document.body.style.border = borderColor;
-        
-        const bgSup = document.querySelector('#menu-sup');
-        bgSup.style.backgroundImage = bgMenuSup
+            document.body.style.backgroundImage = bgColor;
+            document.body.style.border = borderColor;
 
-        const mainBg = document.querySelector('main');
-        mainBg.style.backgroundColor = bgMain;
-    
-        const colorFont = document.querySelector('main');
-        colorFont.style.color = fColor;
+            const bgSup = document.querySelector('#menu-sup');
+            bgSup.style.backgroundImage = bgMenuSup
 
-        const labelSpan = document.querySelectorAll('label span');
-        labelSpan.forEach(span => {
-            span.style.backgroundColor = spanBurger;
-        });
+            const mainBg = document.querySelector('main');
+            mainBg.style.backgroundColor = bgMain;
+
+            const colorFont = document.querySelector('main');
+            colorFont.style.color = fColor;
+
+            const labelSpan = document.querySelectorAll('label span');
+            labelSpan.forEach(span => {
+                span.style.backgroundColor = spanBurger;
+            });
         }
     }
-    
+
 }
 
 // Chama a função quando o DOM estiver pronto
