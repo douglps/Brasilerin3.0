@@ -1,198 +1,243 @@
-/* VERSÃO MOBILE FIRST */ 
+/* VERSÃO MOBILE FIRST */
 @font-face {
-    font-family: 'Varela';
-    src: url(../fonts/VarelaRound-Regular.ttf);
+  font-family: "Varela";
+  src: url(../fonts/VarelaRound-Regular.ttf);
 }
 @font-face {
-    font-family: 'Concert';
-    src: url(../fonts/ConcertOne-Regular.ttf);
+  font-family: "Concert";
+  src: url(../fonts/ConcertOne-Regular.ttf);
 }
 
 /*  ---***--- GLOBAIS ---***--- */
 
+:root {
+  --cor_azul: #3993aa;
+  --cor_clara: #f2f0d5;
+  --cor_amarela: #f2913d;
+  --cor_vermelha: #d95032;
+  --cor_escura: #1c1c1c;
+}
+
 * {
-    margin: 0px;
-    padding: 0px;
-    transition: .3s ease-out;
+  margin: 0px;
+  padding: 0px;
+  transition: 0.3s ease-out;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-html, body{
-    min-height: 100%;
-    height: auto;
+html,
+body {
+  min-height: 100%;
+  height: auto;
 }
 
 body {
-    font-family: 'Varela', Verdana, Geneva, Tahoma, sans-serif;
-    background-image: linear-gradient(180deg, #f2f0d5, #d951325d);
-    background-repeat: no-repeat;
-    width: 100%;
-    border: 3px #3993aa solid;
-    border-radius: 8px;
+  font-family: "Varela", Verdana, Geneva, Tahoma, sans-serif;
+  background-image: linear-gradient(180deg, #f2f0d5, #d951325d);
+  background-repeat: no-repeat;
+  width: 100%;
+  border: 3px #3993aa solid;
+  border-radius: 8px;
 }
 
 /* ---***--- Cabeçalho ---***--- */
 
 div#cabecalho {
-    background-image: linear-gradient(to right, #d951322c, #f2913d6e);
-    border-radius: 5px 15px;
-    width: 90vw;
-    height: 140px;
-    margin: 10px auto;
-    position: relative;
-    min-width: 380px;
+  background-image: linear-gradient(to right, #d951322c, #f2913d6e);
+  border-radius: 5px 15px;
+  width: 90vw;
+  height: 140px;
+  margin: 10px auto;
+  position: relative;
+  min-width: 380px;
 }
 
 #img {
-    width: 25px;
-    position: absolute;
-    top: 22px;
-    right: 2vmax;
-    cursor: pointer;
+  width: 25px;
+  position: absolute;
+  top: 22px;
+  right: 2vmax;
+  cursor: pointer;
 }
 
 #phone {
-    width: 100%;
-    top: 22px;
-    right: 2vmax;
-    cursor: pointer;
+  width: 100%;
+  top: 22px;
+  right: 2vmax;
+  cursor: pointer;
 }
 
-#tamanho { /* Checklist para screen View */
-    opacity: 0%;
+#tamanho {
+  /* Checkbox para screen View */
+  opacity: 0%;
+  z-index: 21;
 }
 
 #tela {
-    position: absolute;
-    width: 80px;
-    top: 20px;
-    right: 6vmax;
-    font-size: 0.8em;
-    text-align: center;
-    display: none;
+  position: absolute;
+  width: 80px;
+  top: 20px;
+  right: 6vmax;
+  font-size: 0.8em;
+  text-align: center;
+  display: none;
 }
 
 #logo {
-    position: absolute;
-    left: 10px;
-    width: 120px;
-    height: 120px;
+  position: absolute;
+  left: 10px;
+  width: 120px;
+  height: 120px;
 }
 
 #letter {
-    width: 110px;
-    height: 35px;
-    position: absolute;
-    left: 110px;
-    top: 54px;
+  width: 110px;
+  height: 35px;
+  position: absolute;
+  left: 110px;
+  top: 54px;
 }
 
-#mode { /* Checklist para dark Mode */
-    opacity: 0%;
+#div_dark {
+  position: absolute;
+  width: 25px;
+  top: 65px;
+  right: 2vmax;
+  opacity: 85%;
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+#mode {
+  /* Checkbox para dark Mode */
+  opacity: 00%;
+  z-index: 20;
+  display: inline;
 }
 
 #dark_m {
-    position: absolute;
-    width: 25px;
-    top: 65px;
-    right: 2vmax;
-    opacity: 85%;
-    cursor: pointer;
-    display: block;
+  display: flex;
+  width: 100%;
+  opacity: 85%;
+  cursor: pointer;
+  z-index: 23;
 }
 
-#home {
-    position: absolute;
-    width: 25px;
-    top: 105px;
-    right: 2vmax;
-    opacity: 50%;;
+#icone {
+  /* Div ícone página */
+  position: absolute;
+  width: 25px;
+  top: 105px;
+  right: 2vmax;
+  opacity: 50%;
 }
 
+#icone img {
+  width: 100%;
+}
 
 /* ---***--- Nav Menu ---***--- */
 
-#menu-sup { /* AJUSTAR MEDIDAS NO MEDIA QUERY */
-    padding: 10px;
-    width: 90vw;
-    margin: 8px auto;
-    background-image: linear-gradient(to left, transparent, #3993aaaf, transparent);
-    border-radius: 15px;
-    display: block;
-    justify-content: space-between;
-    text-indent: 0px;
-    align-items: center;
-    text-align: center;
-    user-select: none;
+#menu-sup {
+  /* AJUSTAR MEDIDAS NO MEDIA QUERY */
+  padding: 10px;
+  width: 90vw;
+  margin: 8px auto;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    #3993aaaf,
+    transparent
+  );
+  border-radius: 15px;
+  display: block;
+  justify-content: space-between;
+  text-indent: 0px;
+  align-items: center;
+  text-align: center;
+  user-select: none;
 }
 
 #menu-sup a {
-    color: #1c1c1c;
+  color: #1c1c1c;
 }
 
-#hide_menu{
-    display: none;
+#hide_menu {
+  display: none;
 }
 
 .btn_menu {
-    font-family: 'Concert';
-    border: 2px #f2f0d5 solid;
-    margin: 4px;
-    padding: 8px;
-    border-radius: 6px;
-    justify-content: center;
-    display: inline-block;
-    align-items: center;
-    font-size: 1.1em;
-    background-color: transparent;
+  font-family: "Concert";
+  border: 2px #f2f0d5 solid;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 6px;
+  justify-content: center;
+  display: inline-block;
+  align-items: center;
+  font-size: 1.1em;
+  background-color: transparent;
 }
 
-.btn_menu:hover{
-    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
-    background-color: #f2913d80;
+.btn_menu:hover {
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+  background-color: #f2913d80;
 }
 
-.btn_menu:active{
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
-    background-color: #f2f0d5;
-    color: #d95032;
-    border: 1px #00000010 solid;
-    font-size: 1.1em;
+.btn_menu:active {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #f2f0d5;
+  color: #d95032;
+  border: 1px #00000010 solid;
+  font-size: 1.1em;
 }
-
 
 /* ---***---  Corpo ---***--- */
 
 main {
- border-radius: 10px;
- padding: 20px;
- width: 90vw;
- background-color: #59deff4b;
- color: #332d2d;
- margin: auto;
- text-align: justify;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90vw;
+  background-color: #59deff4b;
+  color: #332d2d;
+  margin: auto;
+  text-align: justify;
+  border: 1px var(--cor_clara) solid;
+  min-width: 470px;
 }
 
 #corpo {
-    text-indent: 25px;
+  text-indent: 25px;
 }
 
 /*  ---***--- Rodapé ---***--- */
 
 footer {
-    background-color: #d9503299;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px 4px;
-    width: 90vw;
-    margin: 10px auto;
+  background-color: #d9503299;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px 4px;
+  width: 90vw;
+  margin: 10px auto;
 }
 
-img#phone {display: block; }
-img#tablet {display: none; }
-img#desktop {display: none; }
-img#tv {display: none; }
-img#print {display: none; }
+img#phone {
+  display: block;
+}
+img#tablet {
+  display: none;
+}
+img#desktop {
+  display: none;
+}
+img#tv {
+  display: none;
+}
+img#print {
+  display: none;
+}

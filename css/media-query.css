@@ -9,148 +9,191 @@ fonte: W3C - 02/09/23
 */
 
 @media print {
-img#phone {display: none; }
-img#tablet {display: none; }
-img#desktop {display: none; }
-img#tv {display: none; }
-img#print {display: block; }
+  img#phone {
+    display: none;
+  }
+  img#tablet {
+    display: none;
+  }
+  img#desktop {
+    display: none;
+  }
+  img#tv {
+    display: none;
+  }
+  img#print {
+    display: block;
+  }
 }
 
-@media screen and (min-width: 768px)  and (max-width: 992px){ /*  TABLET */
-    img#phone {display: none; }
-    img#tablet {display: block; }
-    img#desktop {display: none; }
-    img#tv {display: none; }
-    img#print {display: none; }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /*  TABLET */
+  img#phone {
+    display: none;
+  }
+  img#tablet {
+    display: block;
+  }
+  img#desktop {
+    display: none;
+  }
+  img#tv {
+    display: none;
+  }
+  img#print {
+    display: none;
+  }
 
-    div#cabecalho {
-        height: 160px;
-        width: 95%;
-        margin: auto;
-    }
+  div#cabecalho {
+    height: 160px;
+    width: 95%;
+    margin: auto;
+  }
 
-    #logo {
-        position: absolute;
-        left: 10px;
-        width: 150px;
-        height: 150px;
-    }
-    
-    #letter {
-        width: 140px;
-        height: 45px;
-        position: absolute;
-        left: 130px;
-        top: 68px;
-    }
+  #logo {
+    position: absolute;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+  }
 
-    #menu-sup{
-        width: 95%;
-    }
+  #letter {
+    width: 140px;
+    height: 45px;
+    position: absolute;
+    left: 130px;
+    top: 68px;
+  }
 
-    main {
-        width: 88%;
-    }
+  #menu-sup {
+    width: 95%;
+  }
 
-    footer {
-        width: 88%;
-    }
+  main {
+    width: 88%;
+  }
+
+  footer {
+    width: 88%;
+  }
 }
 
-@media screen and (min-width: 992px)  and (max-width: 1200px){ /*  DESKTOP */
-    img#phone {display: none; }
-    img#tablet {display: none; }
-    img#desktop {display: block; }
-    img#tv {display: none; }
-    img#print {display: none; }
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /*  DESKTOP */
+  img#phone {
+    display: none;
+  }
+  img#tablet {
+    display: none;
+  }
+  img#desktop {
+    display: block;
+  }
+  img#tv {
+    display: none;
+  }
+  img#print {
+    display: none;
+  }
 
-    div#cabecalho {
-        height: 190px;
-        width: 95%;
-        margin: auto;
-    }
+  div#cabecalho {
+    height: 190px;
+    width: 95%;
+    margin: auto;
+  }
 
-    #logo {
-        position: absolute;
-        left: 10px;
-        width: 180px;
-        height: 180px;
-    }
-    
-    #letter {
-        width: 160px;
-        height: 50px;
-        position: absolute;
-        left: 153px;
-        top: 83px;
-    }
+  #logo {
+    position: absolute;
+    left: 10px;
+    width: 180px;
+    height: 180px;
+  }
 
-    #menu-sup{
-        width: 95%;
-    }
+  #letter {
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    left: 153px;
+    top: 83px;
+  }
 
-    main {
-        width: 90%;
-    }
+  #menu-sup {
+    width: 95%;
+  }
 
-    footer {
-        width: 90%;
-    }
+  main {
+    width: 90%;
+  }
+
+  footer {
+    width: 90%;
+  }
 }
 
-@media screen and (min-width: 1200px){ /*  GRANDES TELAS */
-    img#phone {display: none; }
-    img#tablet {display: none; }
-    img#desktop {display: none; }
-    img#tv {display: block; }
-    img#print {display: none; }
+@media screen and (min-width: 1200px) {
+  /*  GRANDES TELAS */
+  img#phone {
+    display: none;
+  }
+  img#tablet {
+    display: none;
+  }
+  img#desktop {
+    display: none;
+  }
+  img#tv {
+    display: block;
+  }
+  img#print {
+    display: none;
+  }
 
-    div#cabecalho {
-        height: 200px;
-        width: 98%;
-        margin: auto;
-        max-width: 1200px;
-    }
+  div#cabecalho {
+    height: 200px;
+    width: 98%;
+    margin: auto;
+    max-width: 1200px;
+  }
 
-    #logo {
-        position: absolute;
-        left: 10px;
-        width: 190px;
-        height: 190px;
-    }
-    
-    #letter {
-        width: 165px;
-        height: 55px;
-        position: absolute;
-        left: 161px;
-        top: 85px;
-    }
+  #logo {
+    position: absolute;
+    left: 10px;
+    width: 190px;
+    height: 190px;
+  }
 
-    #menu-sup{
-        width: 95%;
-        max-width: 1150px;
-    }
-    
-    main {
-        width: 85%;
-        max-width: 1050px;
-    }
-    
-    footer {
-        width: 90%;
-        max-width: 1200px;
-    }
+  #letter {
+    width: 165px;
+    height: 55px;
+    position: absolute;
+    left: 161px;
+    top: 85px;
+  }
+
+  #menu-sup {
+    width: 95%;
+    max-width: 1150px;
+  }
+
+  main {
+    width: 85%;
+    max-width: 1050px;
+  }
+
+  footer {
+    width: 90%;
+    max-width: 1200px;
+  }
 }
 
 #tablet {
-    width: 100%;
+  width: 100%;
 }
 
 #desktop {
-    width: 100%;
+  width: 100%;
 }
 
 #tv {
-    width: 100%;
+  width: 100%;
 }

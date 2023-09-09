@@ -7,27 +7,37 @@
     <link rel="stylesheet" href="./css/media-query.css">
     <link rel="stylesheet" href="./css/hamburguer.css">
     <link rel="stylesheet" href="./css/dark_mode.css">
-    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="./css/forms.css">
     <title>Brasilerin</title>
 </head>
 <body>
     <header>
         <div id="cabecalho">
+
             <img src="./imagens/arara_logo200x200-300.png" alt="Logotipo Arara" id="logo">
             <img src="./imagens/lettering350x125.png" alt="Brasilerin" id="letter">
+
             <div id="tela"></div>
+
             <div id="img" onclick="tamanho_tela()">
                 <img src="./imagens/icons/mobile.png" alt="Telefone" id="phone" >
                 <img src="./imagens/icons/tablet.png" alt="Tablet" id="tablet">
                 <img src="./imagens/icons/desktop.png" alt="Desktop" id="desktop">
                 <img src="./imagens/icons/tv.png" alt="TV" id="tv">
-                <input type="checkbox" name="tamanho" id="tamanho">
+                <input type="checkbox" name="tamanho" id="tamanho"> <!-- Checkbox Screem View -->
                 <img src="./imagens/icons/print.png" alt="Impressora" id="print">
-            </div>
-            <img src="./imagens/icons/dark_mb.png" alt="Modo Escuro" id="dark_m" onclick="toggleDarkMode(), rotateDarkButton()" >
-            <img src="./imagens/icons/contact.png" alt="Home" id="home">
-            <input type="checkbox" name="mode" id="mode">
-        </div> <!-- div cabecalho-->
+            </div> <!-- id img -->
+
+            <div id="div_dark" onclick="toggleDarkMode()">
+                <img src="./imagens/icons/dark_mb.png" alt="Modo Escuro" id="dark_m">
+                <input type="checkbox" name="mode" id="mode"> <!-- Checkbox Dark Mode -->
+            </div> <!-- id div_dark -->
+
+            <div id="icone">
+                <img src="./imagens/icons/contact.png" alt="Home">
+            </div> <!-- id icone -->
+
+        </div> <!-- id cabecalho -->
 
         <nav id="menu-sup">
             <div class="container">
@@ -50,20 +60,22 @@
         </nav>
     </header>
         <main>
-            <form>
-                <fieldset id="contato">
-                    <legend>Contato: </legend>
-                    <div class="formulario">
-                        <label for="nome"><strong>Nome:</strong></label>
-                        <input type="text" id="nome" name="nome">
-                    </div>
+            <div>
+                <form class="formulario">
+                    <fieldset id="contato">
+                        <legend>Contato: </legend>
+                        <div class="formulario">
+                            <label for="nome"><strong>Nome:</strong></label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
                 
-                    <div class="formulario">
+                        <div class="formulario">
                             <label for="email"><strong>Email:</strong></label>
                             <input type="email" id="email" name="email">
                         </div>
-                    </p>
-                </fieldset>
+                        <div><input type="submit" value="Enviar" class="botoes"></div>
+                    </fieldset>
+            </div>
         </main>
     <footer>
         <h4>Todos os direitos reservados - <span>Brasilerin</span>© 2023</h4>

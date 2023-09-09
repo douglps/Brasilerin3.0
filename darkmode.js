@@ -2,12 +2,19 @@
 function toggleDarkMode() {
     const modeCheckbox = document.getElementById("mode");
     const darkModeButton = document.getElementById("dark_m");
+    
+    // ROTAÇÃO DO BOTÃO DARK MODE
+    const darkButton = document.getElementById("dark_m");
+    
+    darkButton.style.transition = "transform .5s";
+
 
     darkModeButton.addEventListener("click", function () {
         modeCheckbox.checked = !modeCheckbox.checked;
         setDarkMode(modeCheckbox.checked);
+        dark_m.style.transform = darkButton.style.transform ? "" : "rotate(calc(3*180deg))";
         // Salvando o estado do modo escuro no localStorage
-        localStorage.setItem("darkMode", modeCheckbox.checked);
+        localStorage.setItem("darkMode",modeCheckbox.checked);
     });
 
     // Recupera o estado do modo escuro do localStorage ao carregar a página
@@ -75,25 +82,11 @@ function toggleDarkMode() {
         }
     }
     
-
 }
 
 // Chama a função quando o DOM estiver pronto
 document.addEventListener("DOMContentLoaded", toggleDarkMode);
 
-
-// ROTAÇÃO DO BOTÃO DARK MODE
-function rotateDarkButton() {
-    const darkButton = document.getElementById("dark_m");
-
-    darkButton.style.transition = "transform .5s";
-
-    darkButton.addEventListener("click", () => {
-        darkButton.style.transform = darkButton.style.transform ? "" : "rotate(calc(3*180deg))";
-    });
-}
-
-document.addEventListener("DOMContentLoaded", rotateDarkButton);
 
 // BOTÃO MENU HAMBURGUER
 function clickMenu() {
